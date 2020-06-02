@@ -53,8 +53,8 @@
                             <label> ${p.getNombres()}</label>                            
                         </div>
                         <div class="card-body">
-                            <i> S/15.92</i>
-                            <img src="" width="200" height="180">
+                            <i> S/${p.getPrecio()}</i>
+                            <img src="ControladorIMG?id=${p.getId()}" width="200" height="180">
                         </div>
                         <div class="card-footer text-center">
                             <label> Descripcion </label>

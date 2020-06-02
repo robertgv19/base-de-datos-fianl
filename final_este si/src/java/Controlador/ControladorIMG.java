@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.ProductoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author PERSONAL
  */
 public class ControladorIMG extends HttpServlet {
+    ProductoDAO pdao= new ProductoDAO();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -56,6 +58,13 @@ public class ControladorIMG extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        int id=Integer.parseInt(request.getParameter("id"));
+        pdao.listarImg(id, response);
+        
+        
+        
+        
         processRequest(request, response);
     }
 
